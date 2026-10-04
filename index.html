@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Müzik | Enstrüman dersleri, müzik mağazası ve ses sistemi, Arifiye</title>
+<meta name="description" content="Arifiye'de birebir keman, gitar, piyano ve klarnet dersleri. Enstrüman ve aksesuar satışı, ses sistemi kiralama ve kurulum, müzik organizasyonları.">
+<meta name="theme-color" content="#1C1410">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Hanken+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<div class="progress" aria-hidden="true"></div>
+
+<!-- İkon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.6 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="Müzik, sayfanın başı">
+    <svg class="brand-mark" viewBox="0 0 26 22" aria-hidden="true">
+      <line x1="1" y1="2" x2="25" y2="2" stroke-width="1"/>
+      <line x1="1" y1="6.5" x2="25" y2="6.5" stroke-width="1.3"/>
+      <line x1="1" y1="11" x2="25" y2="11" stroke-width="1.6"/>
+      <line x1="1" y1="15.5" x2="25" y2="15.5" stroke-width="2"/>
+      <line x1="1" y1="20" x2="25" y2="20" stroke-width="2.4"/>
+    </svg>
+    <span class="brand-name">Müzik</span>
+  </a>
+  <nav class="nav" aria-label="Ana menü">
+    <a href="#dersler">Dersler</a>
+    <a href="#magaza">Mağaza</a>
+    <a href="#ses-sistemi">Ses sistemi</a>
+    <a href="#organizasyon">Organizasyon</a>
+    <a href="#dinle">Dinle</a>
+  </nav>
+  <div class="head-actions">
+    <a class="btn btn-primary btn-sm head-cta" href="#iletisim">İletişim</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="#dersler">Dersler</a>
+  <a href="#magaza">Mağaza</a>
+  <a href="#ses-sistemi">Ses sistemi</a>
+  <a href="#organizasyon">Organizasyon</a>
+  <a href="#dinle">Dinle</a>
+  <a href="#iletisim">İletişim</a>
+</div>
+
+<main id="icerik">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <canvas id="strings" aria-hidden="true"></canvas>
+    <div class="hero-scrim"></div>
+    <div class="container hero-inner">
+      <h1 id="hero-title" style="--i:0">Müziğe birebir başla.</h1>
+      <p class="lead" style="--i:1">... ile Arifiye'de keman, gitar, piyano ve klarnet dersleri. Enstrüman ve aksesuar satışı, ses sistemi kiralama ve müzik organizasyonları.</p>
+      <div class="hero-cta" style="--i:2">
+        <a class="btn btn-primary" href="#dersler">Derslere bak</a>
+        <a class="btn btn-ghost" href="#dinle">Dinle</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HİZMETLER ================= -->
+  <section class="section" id="hizmetler" aria-labelledby="hizmetler-baslik" style="padding-top:clamp(48px,7vw,96px)">
+    <div class="container">
+      <div class="rule reveal"></div>
+      <h2 id="hizmetler-baslik" class="reveal" style="margin-bottom:clamp(28px,4vw,44px)">Hizmetler</h2>
+      <div class="index" data-stagger>
+        <a href="#dersler">
+          <span class="t">Enstrüman dersleri</span>
+          <span class="d">Keman, gitar, piyano ve klarnet. Tamamen birebir.</span>
+          <span class="go" aria-hidden="true"><svg><use href="#i-down"/></svg></span>
+        </a>
+        <a href="#magaza">
+          <span class="t">Enstrüman ve aksesuar satışı</span>
+          <span class="d">Doğru enstrümanı ve ihtiyacın olan aksesuarı birlikte seçelim.</span>
+          <span class="go" aria-hidden="true"><svg><use href="#i-down"/></svg></span>
+        </a>
+        <a href="#ses-sistemi">
+          <span class="t">Ses sistemi kiralama ve kurulum</span>
+          <span class="d">Ekipmanı kirala, kurulumu bize bırak.</span>
+          <span class="go" aria-hidden="true"><svg><use href="#i-down"/></svg></span>
+        </a>
+        <a href="#organizasyon">
+          <span class="t">Müzik organizasyonları</span>
+          <span class="d">Konserden özel güne, sahne ve ses tek elden.</span>
+          <span class="go" aria-hidden="true"><svg><use href="#i-down"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DERSLER ================= -->
+  <section class="section" id="dersler" aria-labelledby="dersler-baslik">
+    <div class="container">
+      <div class="rule reveal"></div>
+      <div class="section-head reveal">
+        <h2 id="dersler-baslik">Dersler birebir, tempo sana göre</h2>
+        <p class="section-lead">Sınıf kalabalığı yok. Her ders tek öğrenciyle yapılır; neyi, hangi hızda çalışacağımıza seviyene ve hedefine göre birlikte karar veririz.</p>
+      </div>
+
+      <div class="lesson reveal">
+        <div class="tabs" role="tablist" aria-label="Enstrüman seç">
+          <button class="tab" role="tab" id="tab-keman" aria-controls="panel-keman" aria-selected="true"><span class="tab-name">Keman</span><span class="tab-kind">Yaylı</span></button>
+          <button class="tab" role="tab" id="tab-gitar" aria-controls="panel-gitar" aria-selected="false" tabindex="-1"><span class="tab-name">Gitar</span><span class="tab-kind">Telli</span></button>
+          <button class="tab" role="tab" id="tab-piyano" aria-controls="panel-piyano" aria-selected="false" tabindex="-1"><span class="tab-name">Piyano</span><span class="tab-kind">Klavyeli</span></button>
+          <button class="tab" role="tab" id="tab-klarnet" aria-controls="panel-klarnet" aria-selected="false" tabindex="-1"><span class="tab-name">Klarnet</span><span class="tab-kind">Nefesli</span></button>
+        </div>
+
+        <div class="panels">
+          <div class="panel" role="tabpanel" id="panel-keman" aria-labelledby="tab-keman" data-art="keman">
+            <div class="art"></div>
+            <div class="copy">
+              <h3>Keman</h3>
+              <p>Sesi kendin bulduğun bir enstrüman. İlk derslerde duruşa ve yay tutuşuna zaman ayırırız; temiz ses geri kalanını kolaylaştırır.</p>
+              <ul class="learn">
+                <li>Duruş, yay tutuşu ve temiz ses üretimi</li>
+                <li>Nota okuma ve doğru perde (entonasyon)</li>
+                <li>Sevdiğin eserlerle repertuvar oluşturma</li>
+              </ul>
+              <button class="btn btn-primary" type="button" data-topic="Enstrüman dersi" data-inst="Keman">Keman dersi için yaz</button>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-gitar" aria-labelledby="tab-gitar" data-art="gitar" hidden>
+            <div class="art"></div>
+            <div class="copy">
+              <h3>Gitar</h3>
+              <p>Hemen şarkı çalmaya başlayabileceğin bir enstrüman. Akorlarla ve ritimle başlar, sevdiğin parçalara doğru ilerleriz.</p>
+              <ul class="learn">
+                <li>Akorlar, ritim kalıpları ve akor geçişleri</li>
+                <li>Mızrap ve parmak teknikleri</li>
+                <li>Şarkıya eşlik etme ve solo temelleri</li>
+              </ul>
+              <button class="btn btn-primary" type="button" data-topic="Enstrüman dersi" data-inst="Gitar">Gitar dersi için yaz</button>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-piyano" aria-labelledby="tab-piyano" data-art="piyano" hidden>
+            <div class="art"></div>
+            <div class="copy">
+              <h3>Piyano</h3>
+              <p>Müziği bütün yönleriyle görmenin en iyi yollarından biri. Melodi ve eşlik aynı anda, iki elle çalışılır.</p>
+              <ul class="learn">
+                <li>Nota okuma ve iki elle birlikte çalma</li>
+                <li>Ritim, dinamik ve pedal kullanımı</li>
+                <li>Basit parçalardan repertuvara geçiş</li>
+              </ul>
+              <button class="btn btn-primary" type="button" data-topic="Enstrüman dersi" data-inst="Piyano">Piyano dersi için yaz</button>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-klarnet" aria-labelledby="tab-klarnet" data-art="klarnet" hidden>
+            <div class="art"></div>
+            <div class="copy">
+              <h3>Klarnet</h3>
+              <p>Sıcak, yuvarlak bir sesi olan nefesli bir enstrüman. Ton kalitesi nefes ve ağızlık kontrolüyle başlar.</p>
+              <ul class="learn">
+                <li>Nefes, ağızlık ve kamış kontrolü</li>
+                <li>Ton kalitesi ve parmak teknikleri</li>
+                <li>Nota okuma ve eser çalışması</li>
+              </ul>
+              <button class="btn btn-primary" type="button" data-topic="Enstrüman dersi" data-inst="Klarnet">Klarnet dersi için yaz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAĞAZA ================= -->
+  <section class="section" id="magaza" aria-labelledby="magaza-baslik">
+    <div class="container">
+      <div class="rule reveal"></div>
+      <div class="shop">
+        <div class="sticky reveal">
+          <h2 id="magaza-baslik">Enstrüman ve aksesuar</h2>
+          <p class="section-lead">Ders almasan da uğrayabilirsin. Hangi enstrümanın sana uygun olduğuna birlikte karar verelim.</p>
+          <button class="btn btn-primary" type="button" data-topic="Enstrüman ve aksesuar">Stok ve fiyat için yaz</button>
+        </div>
+        <div>
+          <div class="shop-block reveal">
+            <h3>Enstrümanlar</h3>
+            <dl class="shop-list">
+              <div class="shop-row"><dt>Keman</dt><dd>Yaylı çalgılar</dd></div>
+              <div class="shop-row"><dt>Gitar</dt><dd>Telli çalgılar</dd></div>
+              <div class="shop-row"><dt>Piyano ve klavye</dt><dd>Klavyeli çalgılar</dd></div>
+              <div class="shop-row"><dt>Klarnet</dt><dd>Nefesli çalgılar</dd></div>
+            </dl>
+          </div>
+          <div class="shop-block reveal">
+            <h3>Aksesuarlar</h3>
+            <dl class="shop-list">
+              <div class="shop-row"><dt>Bakım ve ses</dt><dd>Tel, reçine, kamış, akort aleti</dd></div>
+              <div class="shop-row"><dt>Taşıma</dt><dd>Kılıf, çanta, askı</dd></div>
+              <div class="shop-row"><dt>Çalışma</dt><dd>Metronom, nota sehpası, mızrap</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SES SİSTEMİ ================= -->
+  <section class="section" id="ses-sistemi" aria-labelledby="ses-baslik">
+    <div class="container">
+      <div class="rule reveal"></div>
+      <div class="sound">
+        <div class="reveal">
+          <h2 id="ses-baslik">Ses sistemi kiralama ve kurulum</h2>
+          <p class="section-lead">Ekipmanı kirala, kurulumunu bize bırak. Etkinliğinin büyüklüğüne ve mekânına göre sistemi birlikte belirleriz.</p>
+          <ul class="gear" aria-label="Kiralanabilen ekipmanlar">
+            <li>Hoparlör</li><li>Mikser</li><li>Mikrofon</li><li>Sahne monitörü</li><li>Kablolama</li>
+          </ul>
+          <button class="btn btn-primary" type="button" data-topic="Ses sistemi">Teklif iste</button>
+        </div>
+        <ol class="tl" aria-label="Süreç adımları">
+          <span class="tl-fill" aria-hidden="true"></span>
+          <li class="tl-step"><span class="tl-dot" aria-hidden="true">1</span><h3>Etkinliğini anlatırsın</h3><p>Etkinlik türü, mekân, tarih ve yaklaşık kişi sayısı yeterli.</p></li>
+          <li class="tl-step"><span class="tl-dot" aria-hidden="true">2</span><h3>Ekipmanı birlikte seçeriz</h3><p>İhtiyaca uygun hoparlör, mikser ve mikrofon belirlenir.</p></li>
+          <li class="tl-step"><span class="tl-dot" aria-hidden="true">3</span><h3>Kurulum ve ses kontrolü</h3><p>Sistem kurulur, etkinlikten önce ses denemesi yapılır.</p></li>
+          <li class="tl-step"><span class="tl-dot" aria-hidden="true">4</span><h3>Etkinlik ve toplama</h3><p>Etkinlik boyunca ses sorunsuz çalışır, sonunda ekipman toplanır.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ORGANİZASYON ================= -->
+  <section class="section stage" id="organizasyon" aria-labelledby="org-baslik">
+    <div class="container">
+      <div class="rule reveal"></div>
+      <div class="section-head reveal">
+        <h2 id="org-baslik">Müzik organizasyonları</h2>
+        <p class="section-lead">Sahne, ses ve müzik programını tek elden planlarız. Sen etkinliğine odaklanırsın.</p>
+      </div>
+      <div class="events" data-stagger>
+        <article class="event"><h3>Konser ve dinletiler</h3><p>Dinleyiciye uygun bir ses düzeni ve akıcı bir program.</p></article>
+        <article class="event"><h3>Özel günler</h3><p>Nişan, doğum günü ve kutlamalar için canlı müzik atmosferi.</p></article>
+        <article class="event"><h3>Kurumsal etkinlikler</h3><p>Lansman, açılış ve toplantılar için müzik ve ses desteği.</p></article>
+      </div>
+      <button class="btn btn-primary reveal" type="button" data-topic="Organizasyon">Organizasyon için yaz</button>
+    </div>
+  </section>
+
+  <!-- ================= DİNLE ================= -->
+  <section class="section" id="dinle" aria-labelledby="dinle-baslik">
+    <div class="container">
+      <div class="rule reveal"></div>
+      <div class="section-head reveal">
+        <h2 id="dinle-baslik">Dinle</h2>
+        <p class="section-lead">Kısa örnekler. Beğendiğin parçadan başla, istediğin yerine geç.</p>
+      </div>
+
+      <div class="player reveal" id="player" role="group" aria-label="Ses oynatıcı">
+        <div class="player-main">
+        <div class="viz-wrap">
+          <canvas id="pl-viz" aria-hidden="true"></canvas>
+          <div class="now">
+            <p class="now-title" id="pl-title">Sabah Teması</p>
+            <p class="now-meta" id="pl-meta">Gitar</p>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="seek-row">
+            <span class="time" id="pl-cur">0:00</span>
+            <input id="pl-seek" type="range" min="0" max="1000" value="0" aria-label="Parçada ilerle">
+            <span class="time" id="pl-dur">0:00</span>
+          </div>
+          <div class="transport-row">
+            <div class="vol">
+              <button class="icon-btn" id="pl-mute" type="button" aria-label="Sesi kapat" aria-pressed="false"><svg><use href="#i-vol"/></svg></button>
+              <input id="pl-vol" type="range" min="0" max="100" value="80" aria-label="Ses düzeyi">
+            </div>
+            <div class="transport">
+              <button class="icon-btn" id="pl-prev" type="button" aria-label="Önceki parça"><svg><use href="#i-prev"/></svg></button>
+              <button class="icon-btn play-btn" id="pl-play" type="button" aria-label="Çal"><svg><use href="#i-play"/></svg></button>
+              <button class="icon-btn" id="pl-next" type="button" aria-label="Sonraki parça"><svg><use href="#i-next"/></svg></button>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        </div>
+        <ol class="tracks" id="pl-list"></ol>
+        <p class="sr-only" id="pl-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KONUM VE İLETİŞİM ================= -->
+  <section class="section" id="iletisim" aria-labelledby="iletisim-baslik">
+    <div class="container">
+      <div class="rule reveal"></div>
+      <div class="section-head reveal">
+        <h2 id="iletisim-baslik">Konum ve iletişim</h2>
+        <p class="section-lead">Ders, ürün, ses sistemi ya da organizasyon. Ne için yazdığını seç, mesajını hazırlayıp gönderelim.</p>
+      </div>
+      <div class="contact">
+        <div class="reveal">
+          <div class="map" id="map">
+            <svg id="map-art" viewBox="0 0 600 510" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Arifiye konumunu gösteren harita çizimi">
+              <rect width="600" height="510" fill="#2A1E17"/>
+              <g stroke="#F5EBDD" stroke-opacity=".08" fill="none" stroke-linecap="round">
+                <path d="M-20 150 C120 120 240 190 380 150 S560 90 640 120" stroke-width="14"/>
+                <path d="M-20 360 C100 380 220 320 360 350 S540 420 640 380" stroke-width="14"/>
+                <path d="M170 -20 C190 120 150 260 200 380 S180 480 200 540" stroke-width="12"/>
+                <path d="M420 -20 C400 110 440 230 410 330 S430 470 420 540" stroke-width="12"/>
+                <path d="M-20 250 H640 M90 -20 V540 M300 -20 V540 M520 -20 V540" stroke-width="3"/>
+                <path d="M-20 60 H640 M-20 440 H640" stroke-width="3"/>
+              </g>
+              <path d="M-20 300 C90 270 200 300 300 280 S520 230 640 260" stroke="#B4532A" stroke-opacity=".28" stroke-width="18" fill="none" stroke-linecap="round"/>
+              <ellipse cx="300" cy="248" rx="26" ry="8" fill="none" stroke="#C9A24B" stroke-opacity=".6"/>
+              <ellipse cx="300" cy="248" rx="46" ry="14" fill="none" stroke="#C9A24B" stroke-opacity=".25"/>
+              <path d="M300 246 C278 218 270 202 270 188 A30 30 0 1 1 330 188 C330 202 322 218 300 246Z" fill="#C9A24B"/>
+              <circle cx="300" cy="188" r="11" fill="#1C1410"/>
+            </svg>
+            <div class="map-cap"><strong>Arifiye</strong><span id="map-note">Tam adres bilgisi yakında eklenecek.</span></div>
+          </div>
+          <div class="map-actions">
+            <a class="btn btn-ghost" id="map-link" href="#" target="_blank" rel="noopener">Yol tarifi al</a>
+          </div>
+          <div class="direct" id="direct"></div>
+        </div>
+
+        <form id="contact-form" class="reveal" novalidate>
+          <div class="field">
+            <label for="f-name">Adın</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-topic">Ne için yazıyorsun?</label>
+            <select id="f-topic" name="topic" required>
+              <option value="">Seç</option>
+              <option>Enstrüman dersi</option>
+              <option>Enstrüman ve aksesuar</option>
+              <option>Ses sistemi</option>
+              <option>Organizasyon</option>
+            </select>
+          </div>
+          <div class="field" id="inst-field" hidden>
+            <label for="f-inst">Hangi enstrüman?</label>
+            <select id="f-inst" name="inst">
+              <option value="">Henüz karar vermedim</option>
+              <option>Keman</option><option>Gitar</option><option>Piyano</option><option>Klarnet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Mesajın</label>
+            <textarea id="f-msg" name="msg" placeholder="Seviyen, tarih, kişi sayısı gibi bilgileri yazabilirsin."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">WhatsApp ile gönder</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <p>© 2026 Müzik. Arifiye.</p>
+    <nav aria-label="Alt menü">
+      <a href="#dersler">Dersler</a><a href="#magaza">Mağaza</a><a href="#ses-sistemi">Ses sistemi</a><a href="#organizasyon">Organizasyon</a><a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
